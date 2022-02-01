@@ -1,5 +1,4 @@
 /*
-
 We were introduced to Visual Studio and how to use 
 the prompt within and commands to create folders and txt files. 
 Also how to run af program with "node filname.txt"
@@ -8,10 +7,8 @@ we also learned how to code basic javascript,
 with the purpose of learning how to get the output in console.
 
 git add -A   
+git commit -m "message"
+git push
 
-
-
-
-
-
+Basic assignments
 */

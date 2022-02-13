@@ -1,0 +1,10 @@
+Maven       npm
+pom.xml     package.json
+
+maven- build to JAR / compile, build artifacts.
+allow different build steps. mvn compile, mvn package .. ect. 
+dependencies and so on.. 
+meta data - is at the top, version, java version, the projects name ect.
+dependencies - dependencies, packages build in to a project. 
+build steps - scripts
+

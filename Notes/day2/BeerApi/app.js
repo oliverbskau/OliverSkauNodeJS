@@ -39,9 +39,7 @@ app.get("/beers/:id", (req, res) => {
 //it just creates this one beer every time this endpoint is triggered
 //POST method
 app.post("/beers", (req, res) => {
-  id = 4;
-  beerName = "IPA";
-  arrayOfBeers.push({ id: id, beerName: beerName });
+  arrayOfBeers.push(req.body);
   res.send(arrayOfBeers);
 });
 

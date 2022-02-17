@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Awesome Clock Website</title>
+
+    <style>
+      #clockDiv {
+        margin: auto;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+      }
+      p {
+        font-size: 200px;
+        font-family: fantasy;
+      }
+      body {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDiv">
+      <p id="clock"></p>
+    </div>
+
+    <script>
+      function setCurrentTime() {
+        const clock = {
+          hour: new Date().getHours(),
+          minute: new Date().getMinutes(),
+          seconds: new Date().getSeconds()
+        };
+        const clockElement = document.getElementById("clock");
+        clockElement.innerHTML =
+          clock.hour + " : " + clock.minute + " : " + clock.seconds;
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16); //found this line on google
+        clockElement.style.color = "#" + randomColor;
+        repeatCurrentTime();
+      }
+
+      function repeatCurrentTime() {
+        const repeatTime = 1000;
+        const timeOut = setTimeout("setCurrentTime()", repeatTime);
+      }
+
+      setCurrentTime();
+    </script>
+  </body>
+</html>

@@ -6,6 +6,7 @@ const arrayOfBeers = [
   { id: 1, beerName: "Tuborg" },
   { id: 2, beerName: "Carlsberg" },
   { id: 3, beerName: "Royal" },
+  { id: 4, beerName: "IPA" },
 ];
 console.log(arrayOfBeers);
 
@@ -64,7 +65,6 @@ app.put("/beers/:id", (req, res) => {
   }
 });
 
-
 //Deletes a beer by its id
 //DELETE method
 app.delete("/beers/:id", (req, res) => {
@@ -77,6 +77,7 @@ app.delete("/beers/:id", (req, res) => {
   res.send("Beer was deleted");
 });
 
-
-
-app.listen(8080);
+const PORT = 8080;
+app.listen(8080, (error) => {
+  console.log("Server is running on port", PORT);
+});

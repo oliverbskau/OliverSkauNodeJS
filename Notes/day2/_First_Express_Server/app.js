@@ -13,6 +13,18 @@ app.get("/", (req, res) => {
   res.send("Hello World!")
 });
 
+// url kangaroofacts?cankick=true
+app.get("/kangaroofacts", (req, res) => {
+  res.send(req.query);
+});
+
+
+app.get("/clientgreeting/:name", (req, res) => {
+  res.send({ greeting: `Hello there, ${req.params.name}.` });
+});
+
+
+
 app.post("/mirror", (req, res) => {
     res.send(req.body);
 });
